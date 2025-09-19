@@ -1,0 +1,63 @@
+poly-video-wall_main
+
+- refers to a database of videos which is listed in the node file
+
+- to load videos, :
+- ensure the folder in the DB can be accessed
+- type search terms
+- a subset of videos will be created
+"script start"
+when script has run, press "query"
+- select a number of videos to output using "n of random requests" or output entire list (dangerous)
+- each of these is then sent to polymovie
+
+
+
+Patch crashes when loading videos to all polys at once, not sure why
+
+
+Trying to figure out the log files, previous history DLs etc.
+
+On the My Passport HDD: there is:
+
+/Volumes/My Passport/youtube-dl/UNDOWNSCALED/IRCAM/UNSCALED
+- contains a ircam-videos.txt which is YouTube links, and a log file which is the paths to the files + tags
+
+/Volumes/My Passport/youtube-dl/ (this whole folder is now copied onto SEBNAS in the location /Volumes/Main-1/CORPUS/CORPUS/VIDEO/youtube-dl)
+
+
+
+
+/Volumes/My Passport/youtube-dl/UNDOWNSCALED/
+
+log.txt in the UNDOWNSCALED folder
+
+Log file starting with:
+0 https://www.youtube.com/watch?v=zlzzO1e6dws
+
+Later on in file it goes on to reference files in /Volumes/My Passport/youtube-dl/ rather than in the UNDOWNSCALED folder - this means it probably serves as a DB of that folder rather than the UNDOWNSCALED folder. It contains a very large number of video refs c. 25000. These clips refer to the 5-second long clips from my history made back in c. 2019.
+
+The UNDOWNSCALED folder appears tp contain the same files (in a different codec most likely).
+
+Copy of log.txt in the UNDOWNSCALED folder seems to be a smaller version of the same file (missing about 10000 records)
+
+/usbshare/youtube-dl/UNDOWNSCALED/youtube-history-300622.txt is a list of URLs
+
+
+
+
+The YT_Hist folder on AdamsVideo SSD contains 6280 full videos
+YT_HistPt2 contains another 2433
+
+Cannot locate the log files for these folders. Eventually found them on AdamsIRCAm where those files must have originated. But the YT_Hist folder here contains 4343 files
+
+The log file yt_dlp_log.txt (in base folder of AdamsIRCAM drive) contains 16199 entries
+
+The three folders YT_Hist, YT_HistPt2 on AdamsVideo and YT_Hist on AdamsIRCAM all seem to contain different files.
+
+Am copying YT_Hist (AdamsIRCAM) to AdamsVIDEO as YT_HistPt3
+
+possibly_duplicates on AdamsVideo seems to have 2343 files. But this seems to be a partial duplicate of YT_Hist on AdamsVideo
+
+
+
