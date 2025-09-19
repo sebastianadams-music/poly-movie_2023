@@ -453,7 +453,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1211.5, 331.0, 150.0, 20.0 ],
-					"text" : "galaxy.v0"
+					"text" : "galaxy.galaxy.v2"
 				}
 
 			}
@@ -476,7 +476,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 234.0, 70.0, 150.0, 20.0 ],
-					"text" : "polymovie.v0"
+					"text" : "polymovie.polymovie.v2"
 				}
 
 			}
