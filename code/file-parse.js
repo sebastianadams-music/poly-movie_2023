@@ -110,8 +110,10 @@ async function dbLineLoop(rl, search) {
 }
 
 async function textToArray(filename) {
-    let search = []
+    Max.post('Re-reading search file...')
+    let search = []
     let fileStream = fs.createReadStream(filename)
+    // Max.post("file contents: ", fileStream)
     let rl = readline.createInterface({
         input: fileStream,
         crlfDelay: Infinity
@@ -119,6 +121,7 @@ async function textToArray(filename) {
       for await (const line of rl) {
         search.push(line)
       }
+     Max.post("file contents: ", search) 
       return search
 }
 
