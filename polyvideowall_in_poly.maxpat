@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 104.0, 87.0, 1622.0, 925.0 ],
+		"rect" : [ 64.0, 87.0, 1622.0, 959.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,29 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 278.0, 646.0, 80.0, 22.0 ],
+					"text" : "speedlim 200"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 270.274858615294534, 747.0, 107.0, 22.0 ],
+					"text" : "print #0.position"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-25",
 					"maxclass" : "newobj",
@@ -403,10 +426,11 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 74.936169147491455, 154.0, 101.0, 22.0 ],
+					"patching_rect" : [ 74.936169147491455, 154.0, 166.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 37.5, 688.71495327102798, 109.0, 22.0 ],
-					"text" : "target $1, play $2"
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 37.5, 688.71495327102798, 109.0, 35.0 ],
+					"text" : "target $1, position $2, play $3"
 				}
 
 			}
@@ -429,7 +453,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 228.5, 317.0, 81.0, 22.0 ],
+					"patching_rect" : [ 217.0, 340.0, 81.0, 22.0 ],
 					"text" : "route position"
 				}
 
@@ -453,7 +477,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1211.5, 331.0, 150.0, 20.0 ],
-					"text" : "galaxy.galaxy.v2"
+					"text" : "galaxy.galaxy.v1"
 				}
 
 			}
@@ -476,7 +500,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 234.0, 70.0, 150.0, 20.0 ],
-					"text" : "polymovie.polymovie.v2"
+					"text" : "polymovie.polymovie.v1"
 				}
 
 			}
@@ -750,7 +774,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 118.0, 138.0, 50.0, 22.0 ],
-									"text" : "1"
+									"text" : "2"
 								}
 
 							}
@@ -3433,7 +3457,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"order" : 1,
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-58", 0 ],
+					"order" : 0,
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -3672,6 +3705,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-206", 0 ],
 					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
